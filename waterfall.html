@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>瀑布流</title>
+  <style type="text/css">
+	*{margin:0;padding:0;}
+	/*css3背景图片样式*/
+	body{-webkit-user-select:none;/*禁止选中图片*/background: 
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+	linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+	background-size:470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+	background-color:#840b2a;}
+	/*css3背景图片样式*/
+	/*内容盒子样式*/
+	#container{margin:100px auto;position:relative}
+	#container .items{position:absolute;border:2px solid #bb9696;box-shadow:0 0 1em #fff;border-radius:2px}
+	#container .items img{display:block;border:none}
+	#container .items .p1{background:#fff;width:180px;padding:10px;font-size:12px;font-family:"楷体";border-radius:1px}
+	#loading{width:100%;height:100px;background:url(images/1.gif) no-repeat center;position:fixed;bottom:12%;display:none}
+	/*内容盒子样式*/
+	/*滚动条*/
+	::-webkit-scrollbar{width:10px;height:6px;background:#ccc;}
+	::-webkit-scrollbar-button{background-color:#e5e5e5;height:0}
+	::-webkit-scrollbar-track{background:#999;}
+	::-webkit-scrollbar-track-piece{background:#ccc;}
+	::-webkit-scrollbar-thumb{background:#666;border-radius:2px}
+	::-webkit-scrollbar-corner{background:#82afff}
+	::-webkit-scrollbar-resizer{background:#ff0bee}
+	scrollbar{-moz-appearance:none !important;background:rgb(0,255,0) !important;}
+	scrollbarbutton{-moz-appearance:none !important;background-color::rgb(0,0,255) !important;}
+	scrollbarbutton:hover{-moz-appearance:none !important;background-color::rgb(255,0,0) !important;}
+	/*滚动条*/
+  </style>
+ </head>
+ <body>
+  <div id="container"></div>
+  <div id="loading"></div>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/waterfall.js"></script>
+ </body>
+</html>
