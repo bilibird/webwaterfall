@@ -60,7 +60,7 @@ $(function(){
 					});
 					mark = true;
 					//隐藏加载图片
-					$loading.hide();
+					$loading.hide(); 
 				});
 			};
 		}
